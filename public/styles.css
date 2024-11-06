@@ -17,6 +17,7 @@
   align-items: center;
   justify-content: center;
   font-weight: bold;
+  height: 60px;
 }
 
 /* Content Layout */
@@ -33,11 +34,13 @@
   padding: 15px;
   background-color: #f3f4f6;
   border-radius: 8px;
-  margin: 10px;
+  margin: 10px 0 10px 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
   gap: 10px;
+  height: calc(100% - 20px);
+  overflow-y: scroll;
 }
 
 .sp-sub-titles {
@@ -88,6 +91,7 @@
   position: relative;
   display: flex;
   min-height: 60vh;
+  background-color: #2563eb;
 }
 
 #map {
@@ -122,8 +126,52 @@
   color: #374151;
 }
 
-.property-price{
+.property-price {
   color: #374151;
+}
+
+/* propery count labels */
+/* style.css */
+.property-label-tooltip {
+  /* background-color: rgba(255, 255, 255, 0.9); */
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 20px;
+  width: 35px;
+  height: 35px;
+  color: #3b82f6;
+}
+
+.property-count-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  transition: transform 0.2s, box-shadow 0.2s;
+  /* margin: 10px auto;  */
+}
+
+.property-count-container:hover {
+  transform: translateY(-5px); /* Subtle lift effect on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+.property-count-container label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.property-count {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2e86de; /* A modern, primary color */
 }
 
 /* Responsive Design */
